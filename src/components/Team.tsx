@@ -58,11 +58,11 @@ export default function Team() {
         <figure id="gallery" className="relative min-h-64 border-t-2 border-line md:border-l-2 md:border-t-0">
           {failed ? (
             <div className="flex h-full min-h-64 items-center justify-center bg-gdg-blue/20 text-xs font-bold">
-              Add public/team.jpg
+              Add public/team.png
             </div>
           ) : (
             <Image
-              src="/team.jpg"
+              src="/team-new.png"
               alt="The Google Developer Groups RBU team together"
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
