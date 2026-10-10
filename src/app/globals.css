@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-/* Lets Tailwind's dark: variant follow the .dark class that next-themes sets */
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
