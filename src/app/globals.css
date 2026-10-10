@@ -77,6 +77,6 @@ body {
 :root { --pixel-grid: 2; }
 
 .font-softpixel {
-  font-family: var(--font-handjet), system-ui, sans-serif;
-  font-variation-settings: "ELGR" var(--pixel-grid), "ELSH" 0;
+  font-family: var(--font-pixel), system-ui, sans-serif;
+  font-weight: 400;
 }

@@ -69,7 +69,7 @@ export default function Footer() {
         <div className="rounded-md border-2 border-line bg-surface p-5 shadow-[6px_6px_0_var(--line)] sm:p-7">
           <div className="flex flex-col items-center text-center">
             <Logo outlined className="h-16 w-24" />
-            <p className="mt-3 font-softpixel text-3xl font-bold">Google Developer Groups</p>
+            <p className="mt-3 font-softpixel text-2xl font-bold">Google Developer Groups</p>
             <p className="mt-1 text-xs font-bold">On Campus &bull; Ramdeobaba University</p>
           </div>
 

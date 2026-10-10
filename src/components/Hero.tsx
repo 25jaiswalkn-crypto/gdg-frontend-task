@@ -11,7 +11,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h1 className="font-softpixel text-5xl font-bold uppercase leading-[1.05] sm:text-6xl lg:text-7xl">
+          <h1 className="font-softpixel text-4xl font-bold uppercase leading-[1.05] sm:text-5xl lg:text-6xl">
             Google Developer Groups, RBU
           </h1>
           <p className="mt-5 max-w-xs font-mono text-sm leading-8 sm:text-base sm:leading-9">

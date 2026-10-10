@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { Handjet, Space_Grotesk, Space_Mono } from "next/font/google";
+import { Pixelify_Sans, Space_Grotesk, Space_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
-const softPixel = Handjet({
+const pixel = Pixelify_Sans({
   subsets: ["latin"],
-  axes: ["ELGR", "ELSH"],
-  variable: "--font-handjet",
+  variable: "--font-pixel",
 });
 
 const grotesk = Space_Grotesk({
@@ -31,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${softPixel.variable} ${grotesk.variable} ${spaceMono.variable}`}
+      className={`${pixel.variable} ${grotesk.variable} ${spaceMono.variable}`}
     >
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
