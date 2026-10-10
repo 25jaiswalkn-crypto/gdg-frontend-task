@@ -2,7 +2,7 @@
 
 A responsive single-page website for GDG On Campus, Ramdeobaba University, built from the provided Figma design for the GDG RBU Recruitment Drive 2026-27 (Web Dev - Frontend).
 
-**Live site:** https://YOUR-APP.vercel.app
+**Live site:** https://gdg-frontend-task-one.vercel.app
 **Repository:** https://github.com/25jaiswalkn-crypto/gdg-frontend-task
 
 ## Features
