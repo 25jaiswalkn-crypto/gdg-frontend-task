@@ -72,3 +72,11 @@ body {
     box-shadow: 5px 5px 0 var(--line);
   }
 }
+/* Headings: mostly smooth, with a hint of pixel texture.
+   Change --pixel-grid between 1 (chunky pixels) and 2 (finest, most subtle). */
+:root { --pixel-grid: 2; }
+
+.font-softpixel {
+  font-family: var(--font-handjet), system-ui, sans-serif;
+  font-variation-settings: "ELGR" var(--pixel-grid), "ELSH" 0;
+}

@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
-import { Pixelify_Sans, Tiny5, Space_Grotesk, Space_Mono } from "next/font/google";
+import { Handjet, Space_Grotesk, Space_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
-const pixel = Pixelify_Sans({
+const softPixel = Handjet({
   subsets: ["latin"],
-  variable: "--font-pixel",
-});
-
-const hero = Tiny5({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-tiny5",
+  axes: ["ELGR", "ELSH"],
+  variable: "--font-handjet",
 });
 
 const grotesk = Space_Grotesk({
@@ -36,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${pixel.variable} ${hero.variable} ${grotesk.variable} ${spaceMono.variable}`}
+      className={`${softPixel.variable} ${grotesk.variable} ${spaceMono.variable}`}
     >
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

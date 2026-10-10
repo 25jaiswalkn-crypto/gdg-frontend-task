@@ -6,7 +6,7 @@ import { ArrowUpRight } from "lucide-react";
 export default function Events() {
   return (
     <section id="events" className="mx-auto max-w-6xl px-4 py-12 md:py-16">
-      <h2 className="text-center text-4xl font-bold sm:text-5xl">Upcoming Event</h2>
+      <h2 className="text-center font-softpixel text-5xl font-bold sm:text-6xl">Upcoming Event</h2>
 
       <div className="mt-10 grid gap-8 md:grid-cols-[2.3fr_1fr]">
         <motion.article
@@ -20,7 +20,7 @@ export default function Events() {
             Upcoming
           </span>
 
-          <h3 className="text-2xl font-bold uppercase tracking-wide">
+          <h3 className="font-softpixel text-3xl font-bold uppercase tracking-wide">
             GDG Orientation
           </h3>
           <p className="mt-3 line-clamp-3 max-w-2xl text-xs leading-relaxed text-white/75">
@@ -46,7 +46,7 @@ export default function Events() {
           transition={{ duration: 0.5, delay: 0.12 }}
           className="card-effect relative flex min-h-80 flex-col rounded-3xl border-2 border-line bg-gdg-yellow p-6 text-black shadow-[8px_8px_0_var(--line)]"
         >
-          <h3 className="text-4xl font-bold leading-none">
+          <h3 className="font-softpixel text-5xl font-bold leading-none">
             New
             <br />
             Event
