@@ -46,17 +46,22 @@ export default function Events() {
           transition={{ duration: 0.5, delay: 0.12 }}
           className="relative flex min-h-80 flex-col rounded-3xl border-2 border-line bg-gdg-yellow p-6 text-black shadow-[8px_8px_0_var(--line)]"
         >
-          <span
-            aria-hidden="true"
-            className="absolute -left-3 top-1/2 z-10 hidden h-6 w-6 -translate-y-1/2 rounded-full border-2 border-line bg-background md:block"
-          />
           <h3 className="font-display text-4xl font-bold leading-none">
             New
             <br />
             Event
           </h3>
 
-          <hr className="mt-auto border-black/20" />
+          {/* Divider with the ticket notch cut into the left edge */}
+          <div className="relative mt-auto">
+            <span
+              aria-hidden="true"
+              className="absolute top-1/2 hidden h-7 w-3.5 -translate-y-1/2 rounded-r-full border-2 border-l-0 border-line bg-background md:block"
+              style={{ left: "-26px" }}
+            />
+            <hr className="border-0 border-t border-dotted border-black/40" />
+          </div>
+
           <div className="mt-4 space-y-1">
             <p className="text-[10px] font-bold uppercase tracking-wider text-black/50">
               Date &amp; Time
