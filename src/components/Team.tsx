@@ -61,7 +61,7 @@ export default function Team() {
               src="/team-new.png"
               alt="The Google Developer Groups RBU team together"
               fill
-              sizes="(min-width: 768px) 45vw, 100vw"
+              sizes="(min-width: 1280px) 600px, (min-width: 768px) 45vw, 100vw" quality={90}
               className="object-cover"
               onError={() => setFailed(true)}
             />
