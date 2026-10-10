@@ -32,6 +32,7 @@
   --color-gdg-purple: #7070ff;
 
   --font-display: var(--font-pixel), sans-serif;
+  --font-hero: var(--font-tiny5), sans-serif;
   --font-sans: var(--font-grotesk), system-ui, sans-serif;
   --font-mono: var(--font-space-mono), monospace;
 }
@@ -54,4 +55,20 @@ body {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+/* Card lift effect: uses the `translate` property so it never fights Framer Motion's transform */
+.card-effect,
+.card-effect-sm {
+  transition: translate 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (hover: hover) {
+  .card-effect:hover {
+    translate: -4px -4px;
+    box-shadow: 12px 12px 0 var(--line);
+  }
+  .card-effect-sm:hover {
+    translate: -2px -2px;
+    box-shadow: 5px 5px 0 var(--line);
+  }
 }

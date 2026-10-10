@@ -11,7 +11,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h1 className="font-display text-4xl font-bold uppercase leading-[1.05] sm:text-5xl lg:text-6xl">
+          <h1 className="font-hero text-4xl font-normal uppercase leading-[1.05] sm:text-5xl lg:text-6xl">
             Google Developer Groups, RBU
           </h1>
           <p className="mt-5 max-w-xs font-mono text-sm leading-8 sm:text-base sm:leading-9">
@@ -33,7 +33,7 @@ export default function Hero() {
             </a>
           </div>
           <span className="mt-5 inline-block -rotate-2 bg-foreground px-2 py-1 text-[10px] font-bold text-background">
-            GDG • RBU
+            GDG &bull; RBU
           </span>
         </motion.div>
 

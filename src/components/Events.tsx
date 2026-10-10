@@ -6,7 +6,7 @@ import { ArrowUpRight } from "lucide-react";
 export default function Events() {
   return (
     <section id="events" className="mx-auto max-w-6xl px-4 py-12 md:py-16">
-      <h2 className="text-center text-4xl font-bold sm:text-5xl">Upcoming Event</h2>
+      <h2 className="text-center font-display text-4xl font-bold sm:text-5xl">Upcoming Event</h2>
 
       <div className="mt-10 grid gap-8 md:grid-cols-[2.3fr_1fr]">
         <motion.article
@@ -14,17 +14,17 @@ export default function Events() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.5 }}
-          className="relative flex min-h-80 flex-col justify-end overflow-hidden rounded-3xl border-2 border-line bg-gradient-to-b from-neutral-200 to-neutral-800 p-6 text-white shadow-[8px_8px_0_var(--line)]"
+          className="card-effect relative flex min-h-80 flex-col justify-end overflow-hidden rounded-3xl border-2 border-line bg-gradient-to-b from-neutral-200 to-neutral-800 p-6 text-white shadow-[8px_8px_0_var(--line)]"
         >
           <span className="absolute left-6 top-6 rounded-full border-2 border-black bg-white px-3 py-0.5 text-[10px] font-bold uppercase text-black">
             Upcoming
           </span>
 
-          <h3 className="text-2xl font-bold uppercase tracking-wide">
+          <h3 className="font-display text-2xl font-bold uppercase tracking-wide">
             GDG Orientation
           </h3>
           <p className="mt-3 line-clamp-3 max-w-2xl text-xs leading-relaxed text-white/75">
-            Google Developer Groups (GDG) â€“ Student Chapter is a community of students passionate
+            Google Developer Groups (GDG) &ndash; Student Chapter is a community of students passionate
             about technology, innovation, and learning. We bring students together to learn,
             build, and grow through technical workshops, hands-on sessions, hackathons, projects,
             and networking opportunities.
@@ -44,9 +44,9 @@ export default function Events() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.5, delay: 0.12 }}
-          className="relative flex min-h-80 flex-col rounded-3xl border-2 border-line bg-gdg-yellow p-6 text-black shadow-[8px_8px_0_var(--line)]"
+          className="card-effect relative flex min-h-80 flex-col rounded-3xl border-2 border-line bg-gdg-yellow p-6 text-black shadow-[8px_8px_0_var(--line)]"
         >
-          <h3 className="text-4xl font-bold leading-none">
+          <h3 className="font-display text-4xl font-bold leading-none">
             New
             <br />
             Event
