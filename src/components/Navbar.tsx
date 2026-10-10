@@ -3,35 +3,36 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
+import Logo from "./Logo";
 
 const links = [
   { label: "Home", href: "#home", color: "bg-gdg-blue" },
   { label: "Team", href: "#team", color: "bg-gdg-red" },
   { label: "Events", href: "#events", color: "bg-gdg-yellow" },
   { label: "Gallery", href: "#gallery", color: "bg-gdg-green" },
-  { label: "FAQs", href: "#faqs", color: "bg-gdg-purple" },
-  { label: "Contact", href: "#contact", color: "bg-gdg-blue" },
+  { label: "Portfolio", href: "#faqs", color: "bg-gdg-purple" },
+  { label: "More", href: "#contact", color: "bg-gdg-blue" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b-2 border-line bg-background/90 backdrop-blur">
+    <header className="sticky top-0 z-50 bg-background/85 backdrop-blur">
       <nav
         aria-label="Main"
-        className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3"
+        className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:grid md:grid-cols-[1fr_auto_1fr]"
       >
-        <a href="#home" className="font-display text-lg font-bold" aria-label="GDG RBU home">
-          GDG<span className="text-gdg-blue">.</span>RBU
+        <a href="#home" aria-label="GDG RBU home" className="justify-self-start">
+          <Logo className="h-8 w-12" />
         </a>
 
-        <ul className="hidden items-center gap-2 md:flex">
+        <ul className="hidden items-center gap-3 md:flex">
           {links.map((l) => (
             <li key={l.label}>
               <a
                 href={l.href}
-                className={`${l.color} rounded-md border-2 border-line px-3 py-1 text-xs font-bold text-black shadow-[2px_2px_0_var(--line)] transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_var(--line)]`}
+                className={`${l.color} block rounded-lg border-2 border-black px-4 py-1.5 text-xs font-bold text-black shadow-[3px_3px_0_#000] transition hover:-translate-y-0.5 hover:shadow-[4px_4px_0_#000] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none`}
               >
                 {l.label}
               </a>
@@ -39,7 +40,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 justify-self-end">
           <ThemeToggle />
           <button
             type="button"
@@ -54,13 +55,13 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <ul className="grid grid-cols-2 gap-2 border-t-2 border-line px-4 py-3 md:hidden">
+        <ul className="grid grid-cols-2 gap-3 px-4 pb-4 md:hidden">
           {links.map((l) => (
             <li key={l.label}>
               <a
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className={`${l.color} block rounded-md border-2 border-line px-3 py-2 text-center text-sm font-bold text-black shadow-[2px_2px_0_var(--line)]`}
+                className={`${l.color} block rounded-lg border-2 border-black px-3 py-2 text-center text-sm font-bold text-black shadow-[3px_3px_0_#000]`}
               >
                 {l.label}
               </a>

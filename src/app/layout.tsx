@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
-import { Chakra_Petch, Space_Mono } from "next/font/google";
+import { Pixelify_Sans, Inter, Space_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
-const chakra = Chakra_Petch({
+const pixel = Pixelify_Sans({
   subsets: ["latin"],
-  weight: ["500", "700"],
-  variable: "--font-chakra",
+  variable: "--font-pixel",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 const spaceMono = Space_Mono({
@@ -23,7 +27,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${chakra.variable} ${spaceMono.variable}`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${pixel.variable} ${inter.variable} ${spaceMono.variable}`}
+    >
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}

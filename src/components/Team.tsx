@@ -3,18 +3,16 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Users, Code2 } from "lucide-react";
+import { CircleCheck } from "lucide-react";
 
 const points = [
   {
-    icon: Users,
     title: "Passionate Community Leaders",
-    text: "Our leaders build a space where students connect, learn together, and grow together.",
+    text: "Our organizers build an inclusive environment where developers can connect, share knowledge, and grow together.",
   },
   {
-    icon: Code2,
     title: "Empowering Developers",
-    text: "We run meetups and hands-on workshops that help developers learn new skills and share ideas.",
+    text: "We host meetups and codelabs to help developers stay current with modern tools and best practices.",
   },
 ];
 
@@ -28,44 +26,42 @@ export default function Team() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.5 }}
-        className="grid overflow-hidden rounded-2xl border-2 border-line bg-surface shadow-[5px_5px_0_var(--line)] md:grid-cols-2"
+        className="grid overflow-hidden rounded-md border-2 border-line bg-cream shadow-[8px_8px_0_var(--line)] md:grid-cols-[1.1fr_0.9fr]"
       >
-        <div className="p-6 sm:p-8">
-          <h2 className="font-display text-3xl font-bold leading-tight sm:text-4xl">
+        <div className="p-6 sm:p-10">
+          <h2 className="max-w-xs font-display text-4xl font-bold leading-tight sm:text-5xl">
             Meet the Google Developer Group Team
           </h2>
-          <p className="mt-4 text-xs leading-relaxed sm:text-sm">
+          <p className="mt-6 text-xs leading-relaxed sm:text-sm">
             Google Developer Groups (GDG) are open and volunteer-run communities for developers
-            interested in Google technologies. Our team connects students through learning,
-            mentoring, and collaboration on campus.
+            interested in Google technologies. Our team focuses on learning, networking, and
+            collaboration through events and hands-on sessions.
           </p>
 
-          <ul className="mt-6 space-y-4">
-            {points.map(({ icon: Icon, title, text }) => (
+          <ul className="mt-8 space-y-5">
+            {points.map(({ title, text }) => (
               <li key={title} className="flex gap-3">
-                <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-line bg-background">
-                  <Icon size={14} />
-                </span>
+                <CircleCheck size={18} className="mt-0.5 shrink-0" aria-hidden="true" />
                 <div>
                   <p className="text-sm font-bold">{title}</p>
-                  <p className="mt-1 text-xs leading-relaxed opacity-80">{text}</p>
+                  <p className="mt-1 text-xs leading-relaxed">{text}</p>
                 </div>
               </li>
             ))}
           </ul>
         </div>
 
-        <figure id="gallery" className="relative min-h-64 border-t-2 border-line md:border-l-2 md:border-t-0">
+        <figure id="gallery" className="relative min-h-72 md:min-h-full">
           {failed ? (
-            <div className="flex h-full min-h-64 items-center justify-center bg-gdg-blue/20 text-xs font-bold">
-              Add public/team.png
+            <div className="flex h-full min-h-72 items-center justify-center bg-gdg-blue/20 text-xs font-bold">
+              Team image not found in public/
             </div>
           ) : (
             <Image
               src="/team-new.png"
               alt="The Google Developer Groups RBU team together"
               fill
-              sizes="(min-width: 768px) 50vw, 100vw"
+              sizes="(min-width: 768px) 45vw, 100vw"
               className="object-cover"
               onError={() => setFailed(true)}
             />
