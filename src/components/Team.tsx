@@ -29,7 +29,7 @@ export default function Team() {
         className="grid overflow-hidden rounded-md border-2 border-line bg-cream shadow-[8px_8px_0_var(--line)] md:grid-cols-[1.1fr_0.9fr]"
       >
         <div className="p-6 sm:p-10">
-          <h2 className="max-w-xs font-display text-4xl font-bold leading-tight sm:text-5xl">
+          <h2 className="max-w-xs text-4xl font-bold leading-tight sm:text-5xl">
             Meet the Google Developer Group Team
           </h2>
           <p className="mt-6 text-xs leading-relaxed sm:text-sm">

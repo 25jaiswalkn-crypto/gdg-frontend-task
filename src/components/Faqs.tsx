@@ -32,7 +32,7 @@ export default function Faqs() {
 
   return (
     <section id="faqs" className="mx-auto max-w-3xl px-4 py-12 md:py-16">
-      <h2 className="text-center font-display text-4xl font-bold sm:text-5xl">FAQs</h2>
+      <h2 className="text-center text-4xl font-bold sm:text-5xl">FAQs</h2>
 
       <div className="mt-8 space-y-4">
         {faqs.map((item, i) => {
