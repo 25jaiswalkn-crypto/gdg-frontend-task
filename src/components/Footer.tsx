@@ -1,6 +1,17 @@
-import { Mail, MapPin } from "lucide-react";
+import { ExternalLink, Mail, MapPin } from "lucide-react";
 import Logo from "./Logo";
 import Confetti from "./Confetti";
+
+const EMAIL = "gdsc@rknec.edu";
+const PLACE = "Ramdeobaba University, Ramdeo Tekdi, Gittikhadan, Katol Road, Nagpur 440013";
+
+// Opens Google Maps with directions from the visitor's location to RBU
+const MAPS_URL = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(PLACE)}`;
+
+// Opens a Gmail compose window addressed to GDG RBU
+const GMAIL_URL = `https://mail.google.com/mail/?view=cm&fs=1&to=${EMAIL}&su=${encodeURIComponent(
+  "Hello GDG RBU"
+)}`;
 
 const iconProps = {
   viewBox: "0 0 24 24",
@@ -15,8 +26,8 @@ const iconProps = {
 
 const socials = [
   {
-    label: "Instagram",
-    href: "https://www.instagram.com/",
+    label: "GDG RBU on Instagram",
+    href: "https://www.instagram.com/gdg_rbu/",
     color: "bg-[#f87171]",
     icon: (
       <svg {...iconProps}>
@@ -27,8 +38,8 @@ const socials = [
     ),
   },
   {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/",
+    label: "GDG RBU on LinkedIn",
+    href: "https://www.linkedin.com/company/gdg-rbu/",
     color: "bg-[#60a5fa]",
     icon: (
       <svg {...iconProps}>
@@ -39,8 +50,8 @@ const socials = [
     ),
   },
   {
-    label: "X (Twitter)",
-    href: "https://x.com/",
+    label: "GDG RBU on X",
+    href: "https://x.com/gdsc_rcoem",
     color: "bg-[#4ade80]",
     icon: (
       <svg {...iconProps}>
@@ -66,20 +77,32 @@ export default function Footer() {
 
           <div className="grid gap-4 md:grid-cols-[1.7fr_1fr]">
             <div className="space-y-4">
-              <div className="flex items-center gap-4 rounded-sm border-2 border-black bg-[#62a6ff] px-4 py-3 text-xs font-bold text-black shadow-[3px_3px_0_#000]">
+              <a
+                href={MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Get directions to Ramdeobaba University on Google Maps"
+                className="group flex items-center gap-4 rounded-sm border-2 border-black bg-[#62a6ff] px-4 py-3 text-xs font-bold text-black shadow-[3px_3px_0_#000] transition hover:-translate-y-0.5 hover:shadow-[4px_4px_0_#000] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none"
+              >
                 <MapPin size={18} className="shrink-0" aria-hidden="true" />
-                <address className="not-italic leading-relaxed">
+                <address className="flex-1 not-italic leading-relaxed">
                   Ramdeobaba University
                   <br />
                   Ramdeo Tekdi, Gittikhadan, Katol Road, Nagpur-440013
                 </address>
-              </div>
+                <ExternalLink size={14} className="shrink-0 opacity-60 group-hover:opacity-100" aria-hidden="true" />
+              </a>
+
               <a
-                href="mailto:gdsc@rknec.edu"
-                className="flex items-center gap-4 rounded-sm border-2 border-black bg-gdg-yellow px-4 py-5 text-xs font-bold text-black shadow-[3px_3px_0_#000] transition hover:-translate-y-0.5"
+                href={GMAIL_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Write an email to ${EMAIL} in Gmail`}
+                className="group flex items-center gap-4 rounded-sm border-2 border-black bg-gdg-yellow px-4 py-5 text-xs font-bold text-black shadow-[3px_3px_0_#000] transition hover:-translate-y-0.5 hover:shadow-[4px_4px_0_#000] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none"
               >
                 <Mail size={18} className="shrink-0" aria-hidden="true" />
-                gdsc@rknec.edu
+                <span className="flex-1">{EMAIL}</span>
+                <ExternalLink size={14} className="shrink-0 opacity-60 group-hover:opacity-100" aria-hidden="true" />
               </a>
             </div>
 
