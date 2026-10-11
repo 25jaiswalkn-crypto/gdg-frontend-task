@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Pixelify_Sans, Space_Grotesk, Space_Mono } from "next/font/google";
+import { Pixelify_Sans, Space_Grotesk, Space_Mono, Chakra_Petch } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
@@ -19,6 +19,12 @@ const spaceMono = Space_Mono({
   variable: "--font-space-mono",
 });
 
+const techFont = Chakra_Petch({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-tech",
+});
+
 export const metadata: Metadata = {
   title: "Google Developer Groups, RBU",
   description:
@@ -30,7 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${pixel.variable} ${grotesk.variable} ${spaceMono.variable}`}
+      className={`${pixel.variable} ${grotesk.variable} ${spaceMono.variable} ${techFont.variable}`}
     >
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
